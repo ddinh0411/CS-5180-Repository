@@ -33,7 +33,7 @@ tfidf_train = tfidf_vectorizer.fit_transform(docs_collection['text'])
 # ---------------------------------------------------------
 # 3. Process each query and compute AP values
 # ---------------------------------------------------------
-
+# Making of the tf-idf model and also getting cosine scores 
 tfidf_test = tfidf_vectorizer.transform(queries['query_text'])
 
 cosine_results = []
@@ -97,12 +97,13 @@ for q_id, ranked_docs in enumerate(cosine_results):
 # ---------------------------------------------------------
 # 5. Sort queries by AP in descending order
 # ---------------------------------------------------------
-
+# Ranking the queries by descending ap scores
 final_ranking = sorted(zip(query_ids, ap_scores), key=lambda x: x[1], reverse=True)
 
 # ---------------------------------------------------------
 # 6. Print the sorted queries and their AP scores
 # ---------------------------------------------------------
+# Print out the queries and ap scores
 print("====================================================")
 print("Queries sorted by Average Precision (AP):")
 for q_id, score in final_ranking:
