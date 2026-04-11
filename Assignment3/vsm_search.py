@@ -1,9 +1,9 @@
 #-------------------------------------------------------------------------
 # AUTHOR: Daniel Dinh
 # FILENAME: vsm_search.py
-# SPECIFICATION: description of the program
+# SPECIFICATION: VSM Search that ranks queries by AP scores
 # FOR: CS 5180- Assignment #3
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 3-4 hours
 #-----------------------------------------------------------*/
 
 # importing required libraries
